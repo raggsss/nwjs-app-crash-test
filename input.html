@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Create a simple CodeMirror instance -->
+    <link rel="stylesheet" href="/node_modules/codemirror/lib/codemirror.css" />
+    <script src="/node_modules/codemirror/lib/codemirror.js"></script>
+    <title>NWjs with Codemirror Demo</title>
+  </head>
+  <body>
+    <h1>NWjs with Codemirror Demo</h1>
+    <textarea id="root"></textarea>
+  </body>
+  <script>
+    var root = document.getElementById("root");
+    var codemirror = CodeMirror.fromTextArea(root, {
+      lineNumbers: true,
+      mode: "text/x-sh",
+      theme: "default",
+      tabSize: 1,
+      showCursorWhenSelecting: true,
+      lineWrapping: true,
+    });
+    var text = "pgAdmin is the most popular and feature rich Open Source administration and development platform for PostgreSQL, the most advanced Open Source database in the world."
+    codemirror.setValue("Pgadmin Rocks!!\n\n"+text);
+    codemirror.focus();
+
+    codemirror.on('mousedown', (e) => {
+      console.log('mousedown')
+    });
+    codemirror.on('focus', (e) => {
+      console.log('focus')
+    });
+  </script>
+</html>

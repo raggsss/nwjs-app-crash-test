@@ -1,0 +1,15 @@
+{
+  "name": "nwjsapp",
+  "main": "index.html",
+  "scripts": {
+    "nwapp": "nw ."
+  },
+  "dependencies": {
+    "codemirror": "^5.59.2",
+    "nw": "0.55.0-sdk"
+  },
+  "devDependencies": {
+    "webpack": "^5.58.1",
+    "webpack-cli": "^4.9.0"
+  }
+}
